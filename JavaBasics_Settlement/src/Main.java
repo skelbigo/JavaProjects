@@ -13,4 +13,20 @@ public static void main(String[] args) {
     settlements[2].changePopulation(500);
     System.out.println(settlements[2]);
     Settlement.printTotalCount();
+
+    Intersection[] cityIntersections = new Intersection[4];
+    cityIntersections[0] = new Intersection("Khreshchatyk", "Institutska", 1500);
+    cityIntersections[1] = new Intersection("Victory Avenue", "Chornovil", 2200);
+    cityIntersections[2] = new UncontrolledIntersection("Garden", "Quiet", 400, false, 10);
+    cityIntersections[3] = new UncontrolledIntersection("Kyiv", "Field", 1200, true, 5);
+
+    settlements[0].setIntersections(cityIntersections);
+    List<Intersection> intersectionsByStreet = settlements[0].findIntersectionsByStreet("Kyiv");
+    System.out.println(intersectionsByStreet);
+
+    Intersection moostBusyIntersection = settlements[0].getMostBusyIntersection();
+    System.out.println(moostBusyIntersection);
+
+    Intersection[] sortedIntersection = settlements[0].sortIntersectionsByDanger();
+    System.out.println(Arrays.toString(sortedIntersection));
 }
