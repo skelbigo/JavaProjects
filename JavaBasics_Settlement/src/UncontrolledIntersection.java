@@ -1,6 +1,6 @@
 public class UncontrolledIntersection extends Intersection{
-    private boolean hasMainRoadSign;
-    private int dangerBonus;
+    private final boolean hasMainRoadSign;
+    private final int dangerBonus;
 
     public UncontrolledIntersection(String mainStreet, String sideStreet, double hourlyTraffic, boolean hasMainRoadSign, int dangerBonus) {
         super(mainStreet, sideStreet, hourlyTraffic);

@@ -1,7 +1,6 @@
 public class Intersection {
-    private String mainStreet;
-    private String sideStreet;
-    private double hourlyTraffic;
+    private final String mainStreet, sideStreet;
+    private final double hourlyTraffic;
 
     public Intersection(String mainStreet, String sideStreet, double hourlyTraffic) {
         this.mainStreet = mainStreet;
